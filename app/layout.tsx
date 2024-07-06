@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import {cn} from '@/lib/utils';
 import "./globals.css";
+import { ThemeProvider } from "@/components/ui/ThemeProvider";
+import { siteData } from "@/constants/SiteData";
 
 
 const DM_SansFont = DM_Sans({ 
@@ -11,8 +13,11 @@ const DM_SansFont = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "ProMedix",
-  description: "A healthcare management system",
+  title: siteData.brandName,
+  description: siteData.brandDesp,
+  icons: {
+    icon: siteData.brandLogo,
+  },
 };
 
 export default function RootLayout({
@@ -23,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn('min-h-screen bg-dark-300 font-sans antialiased' , DM_SansFont.variable)}>
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
