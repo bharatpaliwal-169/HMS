@@ -14,7 +14,9 @@ import "react-phone-number-input/style.css";
 import CustomFormField from "./utils/CustomFormField";
 import { FormFieldType } from '@/constants/enums/FormFieldType';
 import SubmitButton from "./utils/SubmitButton";
+import { siteData } from '@/constants/SiteData';
 
+import { PROJECT_ID,BUCKET_ID,ENDPOINT } from '@/lib/appwrite.config';
 const PatientForm = () => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
@@ -38,11 +40,11 @@ const PatientForm = () => {
         phone: values.phone,
       };
 
+      console.log(PROJECT_ID + " " + ENDPOINT +  " "  + BUCKET_ID);
       const newUser = await createUser(user);
-
-      // if (newUser) {
-      //   router.push(`/patients/${newUser.$id}/register`);
-      // }
+      if (newUser) {
+        router.push(`/patients/${newUser.$id}/register`);
+      }
     } catch (error) {
       console.log(error);
     }
@@ -55,8 +57,8 @@ const PatientForm = () => {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="flex-1 space-y-6">
           <section className="mb-12 space-y-4">
-            <h1 className="header">Hi there 👋</h1>
-            <p className="text-dark-700">Get started with appointments.</p>
+            <h1 className="header text-white">{siteData.FormHeader1}</h1>
+            <p className="text-dark-700">{siteData.appointments}</p>
           </section>
 
           <CustomFormField
@@ -84,10 +86,10 @@ const PatientForm = () => {
             control={form.control}
             name="phone"
             label="Phone number"
-            placeholder="(555) 123-4567"
+            placeholder="(+91) 1234567890"
           />
 
-          <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
+          <SubmitButton isLoading={isLoading}>{siteData.getStarted}</SubmitButton>
         </form>
       </Form>
     </>
