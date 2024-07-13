@@ -5,6 +5,7 @@ import React, { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 
 import { convertFileToUrl } from "@/lib/utils";
+import { siteData } from "@/constants/SiteData";
 
 type FileUploaderProps = {
   files: File[] | undefined;
@@ -39,11 +40,11 @@ export const FileUploader = ({ files, onChange }: FileUploaderProps) => {
           />
           <div className="file-upload_label">
             <p className="text-14-regular ">
-              <span className="text-green-500">Click to upload </span>
-              or drag and drop
+              <span className="text-green-500">{siteData.uploadBtn} </span>
+              {siteData.dnd}
             </p>
             <p className="text-12-regular">
-              SVG, PNG, JPG or GIF (max. 800x400px)
+              {siteData.allFileType}
             </p>
           </div>
         </>

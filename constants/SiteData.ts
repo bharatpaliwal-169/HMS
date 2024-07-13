@@ -8,7 +8,9 @@ export const siteData = {
   FormHeader1 : "Hi there 👋",
   appointments : "Get started with appointments.",
   getStarted : "Get Started",
-  RegisterFormHearder : "Welcome 👋",
+  RegisterFormHearder : "Welcome ",
+  handwave : "👋",
+  prayHands : "🙏",
   RegisterFormDesp : "Tell us more about yourself...",
   PersonalInfo : "Personal Information",
   MedicalInfo: "Medical Information",
@@ -19,6 +21,9 @@ export const siteData = {
   disclosureConsent : "I consent to the use and disclosure of my health information for treatment purposes.",
   docScan : "Scanned Copy of Identification Document.",
   treatmentConsent : "I consent to receive treatment for my health condition.",
+  uploadBtn : "Click to upload",
+  dnd : "or drag and drop",
+  allFileType : "SVG, PNG, JPG or GIF (max. 800x400px)",
   
 
 };

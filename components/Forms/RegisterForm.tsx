@@ -111,7 +111,7 @@ const RegisterForm = ({ user }: { user: User }) => {
           className="flex-1 space-y-12"
         >
           <section className="space-y-4">
-            <h1 className="header">{siteData.RegisterFormHearder}</h1>
+            <h1 className="header">{siteData.RegisterFormHearder}{user.name}{siteData.prayHands}</h1>
             <p className="text-dark-700">{siteData.RegisterFormDesp}</p>
           </section>
 
@@ -148,7 +148,7 @@ const RegisterForm = ({ user }: { user: User }) => {
                 control={form.control}
                 name="phone"
                 label="Phone Number"
-                placeholder="(555) 123-4567"
+                placeholder="(+91) 1234567890"
               />
             </div>
 

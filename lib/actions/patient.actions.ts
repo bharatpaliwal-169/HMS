@@ -1,12 +1,12 @@
 "use server";
 
 import { ID, 
-  InputFile, 
+  // InputFile, 
   Query } from "node-appwrite";
-
+import { InputFile } from 'node-appwrite/file';
 import {
-  BUCKET_ID,
-  DATABASE_ID,
+  NEXT_PUBLIC_BUCKET_ID as BUCKET_ID,
+  DB_ID as DATABASE_ID,
   ENDPOINT,
   PATIENT_COLLECTION_ID,
   PROJECT_ID,
@@ -71,7 +71,7 @@ export const registerPatient = async ({
     if (identificationDocument) {
       const inputFile =
         identificationDocument &&
-        InputFile.fromBlob(
+        InputFile.fromBuffer(
           identificationDocument?.get("blobFile") as Blob,
           identificationDocument?.get("fileName") as string
         );
@@ -116,3 +116,4 @@ export const getPatient = async (userId: string) => {
     );
   }
 };
+

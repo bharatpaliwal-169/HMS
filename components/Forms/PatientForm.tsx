@@ -56,7 +56,7 @@ const PatientForm = () => {
     <>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="flex-1 space-y-6">
-          <section className="mb-12 space-y-4">
+          <section className="mb-2 space-y-4">
             <h1 className="header text-white">{siteData.FormHeader1}</h1>
             <p className="text-dark-700">{siteData.appointments}</p>
           </section>

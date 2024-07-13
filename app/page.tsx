@@ -9,15 +9,14 @@ const Home = () => {
   return (
     <div className='flex h-screen min-h-screen dark:text-white'>
       <section className='remove-scrollbar container my-auto'>
-        <div className='sub-container max-w-[496px] md:hidden'>
-          <Image src="/assets/icons/logo-full.svg" alt="logo" width = {496} height = {496}
-            className='mb-10 h-10 w-fit'
+        <div className='sub-container max-w-[496px]'>
+          <Image src="/assets/icons/logo-nbg.svg" alt="logo" width = {496} height = {496}
+            className='mb-5 h-7 w-fit'
           />
-        </div>
 
-        <PatientForm />
+          <PatientForm />
 
-        <div className="text-14-regular mt-10 flex justify-between">
+          <div className="text-14-regular mt-5 mb-5 flex justify-between">
             <p className="justify-items-end text-dark-600 xl:text-left">
               {siteData.copyWrite}
             </p>
@@ -25,6 +24,7 @@ const Home = () => {
               {navLinks.admin.title}
             </Link>
           </div>
+        </div>
       </section>
 
       <Image
