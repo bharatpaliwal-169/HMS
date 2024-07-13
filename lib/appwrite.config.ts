@@ -19,7 +19,8 @@ export const DB_ID= "668a31ec000cd02b2164"
 export const PATIENT_COLLECTION_ID="668a321f003c6eda2865"
 export const DOCTOR_COLLECTION_ID="668a32370002e3ce0acb"
 export const APPOINTMENT_COLLECTION_ID="668a324f002dd94eeca1"
-export const NEXT_PUBLIC_BUCKET_ID="668a32960029dc937bc2"
+export const BUCKET_ID="668a32960029dc937bc2"
+
 
 const client = new sdk.Client();
 

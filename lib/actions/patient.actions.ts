@@ -5,7 +5,7 @@ import { ID,
   Query } from "node-appwrite";
 import { InputFile } from 'node-appwrite/file';
 import {
-  NEXT_PUBLIC_BUCKET_ID as BUCKET_ID,
+  BUCKET_ID,
   DB_ID as DATABASE_ID,
   ENDPOINT,
   PATIENT_COLLECTION_ID,

@@ -24,6 +24,8 @@ export const siteData = {
   uploadBtn : "Click to upload",
   dnd : "or drag and drop",
   allFileType : "SVG, PNG, JPG or GIF (max. 800x400px)",
+  newAppointment : "New Appointment",
+  appointmentDesp : "Request a new appointment in 10 seconds.",
   
 
 };
