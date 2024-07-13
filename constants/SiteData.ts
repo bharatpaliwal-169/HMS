@@ -26,6 +26,13 @@ export const siteData = {
   allFileType : "SVG, PNG, JPG or GIF (max. 800x400px)",
   newAppointment : "New Appointment",
   appointmentDesp : "Request a new appointment in 10 seconds.",
+  adminDash : "Admin Dashboard",
+  welcomeAdmin : "Welcome Admin👋",
+  despAdmin : "Start the day with managing new appointments",
+  AdminAccessVerification : "Admin Access Verification",
+  enterPasskey : "To access the admin page, please enter the passkey.",
+  PasskeyBtn : "Enter Admin Passkey",
+  noResults : "No results.",
   
 
 };
