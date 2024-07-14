@@ -1,6 +1,7 @@
 <div align="center">
   <br />
     <h1 align="center">ProMedix</h1>
+    <img src="https://github.com/user-attachments/assets/2a89d93b-d8d6-4301-9956-f862eeb8a52b" alt="adminDas" />
   <br />
   <h3 align="center">A HealthCare Management System</h3>
   
